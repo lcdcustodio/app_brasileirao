@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_bg"
+    android:orientation="vertical" >
+    <!-- android:layout_height="match_parent"
+         android:layout_height="wrap_content" -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/feed_item_margin"
+        android:layout_marginRight="@dimen/feed_item_margin"       
+          
+        android:background="@color/white"        
+        android:orientation="vertical">
+        
+        <View
+            android:id="@+id/View01" 
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+            android:layout_marginRight="@dimen/feed_item_status_pad_left_right"
+            android:background="@color/silver"
+            />
+	
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/feed_item_padding_left_right"
+            android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+			<!--  ListRow Left sied Thumbnail image -->
+       <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/thumbnail"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/feed_item_padding_left_right"
+            android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/profilePic"
+                android:layout_width="@dimen/feed_item_profile_pic"
+                android:layout_height="@dimen/feed_item_profile_pic"
+                android:src="@drawable/action_people"
+                android:scaleType="fitCenter" >
+            </com.android.volley.toolbox.NetworkImageView>
+
+		        <!--  
+				<ImageView     
+					android:id="@+id/list_image"   
+			        android:layout_width="50dip"
+  					android:src="@drawable/action_people"			        
+			        android:layout_height="50dip"/> -->
+			      
+			    <!--     
+	            <com.android.volley.toolbox.NetworkImageView
+	                android:id="@+id/list_image"
+	                android:layout_width="@dimen/feed_item_profile_pic"
+	                android:layout_height="@dimen/feed_item_profile_pic"
+	                android:layout_marginRight="10dp"
+	                android:scaleType="fitCenter" >
+	            </com.android.volley.toolbox.NetworkImageView>   
+			         -->
+		        
+			</LinearLayout>
+		    
+			<!-- Title Of Song-->
+		    <TextView
+		        android:id="@+id/title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignTop="@+id/thumbnail"
+		        android:layout_toRightOf="@+id/thumbnail"
+		        android:text="Rihanna Love the way lie"
+		        android:textColor="#040404"
+		        android:typeface="sans" 
+		        android:textSize="15dip"
+		        android:textStyle="bold"/>
+		
+			<!-- Artist Name -->
+		    <TextView
+		        android:id="@+id/artist"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/title"
+		        android:textColor="#343434"
+		        android:textSize="10dip"
+		        android:layout_marginTop="1dip"
+		        android:layout_toRightOf="@+id/thumbnail"
+		        android:text="Just gona stand there and ..." />
+		
+			<!-- Rightend Duration -->
+		    <TextView
+		        android:id="@+id/duration"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        
+		        android:layout_toRightOf="@+id/thumbnail"
+		        android:layout_below="@id/artist"
+		        android:layout_marginTop="1dip"
+		        
+		        android:text="5:45"
+		        android:layout_marginRight="5dip"
+		        android:textSize="10dip"
+		        android:textColor="#10bcc9"
+		        android:textStyle="bold"/>
+		    	<!-- android:layout_alignTop="@id/title"
+		    		 android:layout_alignParentRight="true"
+		    		 android:gravity="right"
+		    		 android:textColor="#10bcc9"
+		    		 android:textColor="@color/ab_mid"
+		    	 -->
+      </RelativeLayout>
+	</LinearLayout>
+</LinearLayout>

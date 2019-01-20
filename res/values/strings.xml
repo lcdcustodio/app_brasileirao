@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">Brasileirão</string>
+	<string name="internet_connection">Sem conexão com a internet!</string>
+	<string name="jogos_header">Acompanhe os jogos</string>
+	
+</resources>
