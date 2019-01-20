@@ -68,7 +68,6 @@ public class Jogos_Fragment extends Fragment {
 			    String res = response.getString("success");
 			    if(Integer.parseInt(res) == 1){
 
-			    	//JSONArray jogosArray = new JSONArray(response.getString("ranking"));
 			    	JSONArray jogosArray = new JSONArray(response.getString("jogos"));
 			
 
@@ -76,12 +75,18 @@ public class Jogos_Fragment extends Fragment {
 						JSONObject jogosObj = (JSONObject) jogosArray.get(i);
 							
 						JogoItem item = new JogoItem();
-						
 
 						item.setSigla_host(jogosObj.getString("sigla_host"));
 						item.setPlacar_host(jogosObj.getString("placar_host"));
 						item.setPicurl_host(jogosObj.getString("picurl_host"));
-		
+						item.setPlacar_guest(jogosObj.getString("placar_guest"));
+						item.setPicurl_guest(jogosObj.getString("picurl_guest"));
+						item.setSigla_guest(jogosObj.getString("sigla_guest"));
+						item.setEstadio(jogosObj.getString("estadio"));
+						item.setStatus(jogosObj.getString("status"));
+						item.setDia(jogosObj.getString("dia"));
+						item.setHora(jogosObj.getString("hora"));						
+						
 						jogoItems.add(item);
 						
 					}

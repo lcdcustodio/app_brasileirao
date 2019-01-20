@@ -35,5 +35,6 @@
     
     
     <dimen name="sigla">30dp</dimen>
-    
+    <dimen name="servico">12dp</dimen>
+    <dimen name="servico_status_padding">10dp</dimen>
 </resources>

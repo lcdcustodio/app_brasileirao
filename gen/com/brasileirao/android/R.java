@@ -97,6 +97,8 @@ Toolbar Hive example
         public static final int feed_item_status_pad_left_right=0x7f05000f;
         public static final int feed_item_status_pad_top=0x7f050010;
         public static final int feed_item_timestamp=0x7f05000e;
+        public static final int servico=0x7f050019;
+        public static final int servico_status_padding=0x7f05001a;
         public static final int sigla=0x7f050018;
         public static final int tab_label=0x7f050015;
         /** Toolbar Hive example 
@@ -116,19 +118,22 @@ Toolbar Hive example
         public static final int no_connection_icon=0x7f020005;
     }
     public static final class id {
-        public static final int View01=0x7f080005;
-        public static final int app_name=0x7f08000c;
-        public static final int artist=0x7f080008;
-        public static final int connection_text=0x7f08000b;
-        public static final int duration=0x7f080009;
+        public static final int View01=0x7f08000c;
+        public static final int app_name=0x7f08000f;
+        public static final int connection_text=0x7f08000e;
         public static final int frame_container=0x7f080000;
-        public static final int frame_logo=0x7f08000a;
+        public static final int frame_logo=0x7f08000d;
         public static final int list=0x7f080001;
-        public static final int placar_host=0x7f080003;
-        public static final int profilePic=0x7f080002;
-        public static final int sigla_host=0x7f080004;
-        public static final int thumbnail=0x7f080006;
-        public static final int title=0x7f080007;
+        public static final int picurl_guest=0x7f080009;
+        public static final int picurl_host=0x7f080004;
+        public static final int placar_guest=0x7f080008;
+        public static final int placar_host=0x7f080005;
+        public static final int servico=0x7f080002;
+        public static final int sigla_guest=0x7f08000a;
+        public static final int sigla_host=0x7f080003;
+        public static final int status=0x7f08000b;
+        public static final int versus=0x7f080006;
+        public static final int versus2=0x7f080007;
     }
     public static final class layout {
         public static final int activity_extra=0x7f030000;
@@ -137,14 +142,14 @@ Toolbar Hive example
         public static final int jogos_footer_item=0x7f030003;
         public static final int jogos_header_item=0x7f030004;
         public static final int jogos_item=0x7f030005;
-        public static final int jogos_item_bckup=0x7f030006;
-        public static final int no_internet_connection=0x7f030007;
-        public static final int splash_fragment=0x7f030008;
+        public static final int no_internet_connection=0x7f030006;
+        public static final int splash_fragment=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
         public static final int internet_connection=0x7f060001;
         public static final int jogos_header=0x7f060002;
+        public static final int versus=0x7f060003;
     }
     public static final class style {
         /** 
