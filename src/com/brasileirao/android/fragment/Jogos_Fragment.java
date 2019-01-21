@@ -2,27 +2,37 @@ package com.brasileirao.android.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.android.volley.toolbox.NetworkImageView;
 import com.brasileirao.android.R;
 import com.brasileirao.android.listview.JogoItem;
 import com.brasileirao.android.listview.JogosBaseAdapter;
+import com.brasileirao.android.webservice.SwipeRefreshAsyncTask;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v4.widget.SwipeRefreshLayout;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class Jogos_Fragment extends Fragment {
 
 	private List<JogoItem> jogoItems;
 	private JogosBaseAdapter listAdapter;
 	private ListView list;
+    SwipeRefreshLayout mSwipeRefreshLayout;
 	
 	public Jogos_Fragment(){}
 	
@@ -32,14 +42,67 @@ public class Jogos_Fragment extends Fragment {
 		
 		View rootView = inflater.inflate(R.layout.fgmt_background, container,false);
 		View custom = inflater.inflate(R.layout.jogos_fgmt, null);
-
-		getActivity().getActionBar().show();
-		//getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 		
-		list  = (ListView) custom.findViewById(R.id.list);		
+		list  = (ListView) custom.findViewById(R.id.list);	
+        mSwipeRefreshLayout = (SwipeRefreshLayout) custom.findViewById(R.id.swipeToRefresh);
+        
 		jogoItems = new ArrayList<JogoItem>();		
 		listAdapter = new JogosBaseAdapter(getActivity(),jogoItems);
 		
+		
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                
+            	list.setAdapter(null);
+            	jogoItems.clear();
+            	
+    			try {
+					parseJsonFeed(new SwipeRefreshAsyncTask().execute().get());
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ExecutionException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+    			
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        });
+		
+        
+        list.setOnItemClickListener(new OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowId) {
+            	
+                TextView sigla_host = (TextView)view.findViewById(R.id.sigla_host);        
+                TextView sigla_guest = (TextView)view.findViewById(R.id.sigla_guest);        
+
+                String host = sigla_host.getText().toString();
+                String guest = sigla_guest.getText().toString();
+            	
+    			Fragment fragment = new Lances_Fragment();
+    			
+    			Bundle args = new Bundle();
+    			
+    			args.putString("sigla_host", host);
+    			args.putString("sigla_guest", guest);
+    			
+    			fragment.setArguments(args);
+
+    			android.support.v4.app.FragmentManager fm = getActivity().getSupportFragmentManager();
+    			android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
+    			
+			    fragmentTransaction.replace(R.id.frame_container, fragment, "Lances_Fragment");			    
+			    fragmentTransaction.addToBackStack("Jogos_Fragment");
+    			
+    			fragmentTransaction.commit();
+                
+                
+            }
+        });		
+        
 		String jogosString = getArguments().getString("json_Obj");
 		
 		try {
