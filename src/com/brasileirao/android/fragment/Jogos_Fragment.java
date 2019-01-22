@@ -92,9 +92,6 @@ public class Jogos_Fragment extends Fragment {
                 intent.putExtra("sigla_guest", guest);
 
                 startActivity(intent);
-
-    			
-                
                 
             }
         });		
