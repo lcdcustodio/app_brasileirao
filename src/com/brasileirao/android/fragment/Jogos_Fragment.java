@@ -9,11 +9,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.android.volley.toolbox.NetworkImageView;
+import com.brasileirao.android.Lances;
 import com.brasileirao.android.R;
 import com.brasileirao.android.listview.JogoItem;
 import com.brasileirao.android.listview.JogosBaseAdapter;
 import com.brasileirao.android.webservice.SwipeRefreshAsyncTask;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -82,22 +85,15 @@ public class Jogos_Fragment extends Fragment {
                 String host = sigla_host.getText().toString();
                 String guest = sigla_guest.getText().toString();
             	
-    			Fragment fragment = new Lances_Fragment();
-    			
-    			Bundle args = new Bundle();
-    			
-    			args.putString("sigla_host", host);
-    			args.putString("sigla_guest", guest);
-    			
-    			fragment.setArguments(args);
+  
+                Intent intent = new Intent(getActivity(), Lances.class);
 
-    			android.support.v4.app.FragmentManager fm = getActivity().getSupportFragmentManager();
-    			android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                intent.putExtra("sigla_host", host);
+                intent.putExtra("sigla_guest", guest);
+
+                startActivity(intent);
+
     			
-			    fragmentTransaction.replace(R.id.frame_container, fragment, "Lances_Fragment");			    
-			    fragmentTransaction.addToBackStack("Jogos_Fragment");
-    			
-    			fragmentTransaction.commit();
                 
                 
             }

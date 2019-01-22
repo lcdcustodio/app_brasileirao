@@ -1,6 +1,7 @@
 package com.brasileirao.android;
 
 
+
 import com.brasileirao.android.fragment.Splash_Fragment;
 
 
@@ -31,10 +32,8 @@ public class Welcome extends AppCompatActivity {
 	@Override
 	public boolean onSupportNavigateUp() {
 		
-		getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-		getSupportActionBar().setDisplayShowHomeEnabled(false);
-
 	    onBackPressed();
+		
 
 	    return true;
 	}

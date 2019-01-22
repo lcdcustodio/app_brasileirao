@@ -19,7 +19,7 @@ public class UserFunctions {
     private static String brasileiraoURL = "http://ec2-52-90-92-199.compute-1.amazonaws.com/xmiles/login/";
     
     private static String jogos_tag = "jogos";
-    //private static String jogos_tag = "ranking";
+    private static String lances_tag = "lances";
 
     // constructor
     public UserFunctions(){
@@ -36,5 +36,16 @@ public class UserFunctions {
         JSONObject json = jsonParser.getJSONFromUrl(brasileiraoURL, params);
         return json;
     }
+    
+    public JSONObject getLances(String sigla_host, String sigla_guest){
+        // Building Parameters
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("tag", lances_tag));
+        params.add(new BasicNameValuePair("sigla_host", sigla_host));
+        params.add(new BasicNameValuePair("sigla_guest", sigla_guest));
+        JSONObject json = jsonParser.getJSONFromUrl(brasileiraoURL, params);
+        return json;
+    }
+    
 
 }
