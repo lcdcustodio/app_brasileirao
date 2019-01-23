@@ -1,17 +1,17 @@
 package com.brasileirao.android.listview;
 
 public class JogoItem {
-	private int id;
+	
 	private String sigla_host, picurl_host, placar_host, placar_guest,
 				picurl_guest, sigla_guest, estadio, status, dia, hora;
 
 	public JogoItem() {
 	}
 
-	public JogoItem(int id, String sigla_host, String picurl_host, String placar_host , String placar_guest, 
+	public JogoItem( String sigla_host, String picurl_host, String placar_host , String placar_guest, 
 			String picurl_guest, String sigla_guest, String estadio, String status, String dia, String hora) {
 		super();
-		this.id = id;
+
 		this.sigla_host = sigla_host;
 		this.picurl_host = picurl_host;
 		this.placar_host = placar_host;
@@ -22,15 +22,7 @@ public class JogoItem {
 		this.dia = dia;
 		this.hora = hora;
 	}
-/*
-	public int getId() {
-		return id;
-	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-*/
 	public String getSigla_host() {
 		return sigla_host;
 	}

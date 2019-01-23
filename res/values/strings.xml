@@ -4,5 +4,6 @@
 	<string name="internet_connection">Sem conexão com a internet!</string>
 	<string name="jogos_header">Acompanhe os jogos</string>
 	<string name="versus">x</string>
+	<string name="lance">LANCE A LANCE</string>
 	
 </resources>

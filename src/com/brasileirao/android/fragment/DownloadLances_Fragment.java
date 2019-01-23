@@ -72,7 +72,7 @@ public class DownloadLances_Fragment extends Fragment {
 			android.support.v4.app.FragmentManager fm = getActivity().getSupportFragmentManager();
 			android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
 			fragmentTransaction.replace(R.id.frame_container, fragment);
-		    //fragmentTransaction.addToBackStack("bsds");
+
 
 			fragmentTransaction.commit();
 

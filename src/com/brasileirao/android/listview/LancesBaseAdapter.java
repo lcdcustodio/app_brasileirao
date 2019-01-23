@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 
 import android.widget.TextView;
 
@@ -31,6 +32,8 @@ public class LancesBaseAdapter extends BaseAdapter {
 	private static final Integer TYPE2   = 2;
 	private static final Integer TYPE3   = 3;
 	
+	private static final Integer OFFSET_1  = 1;
+	private static final Integer OFFSET_2  = 2;
 	
 	
 	public LancesBaseAdapter(Context context, List<LanceItem> lanceItems){
@@ -43,8 +46,8 @@ public class LancesBaseAdapter extends BaseAdapter {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		//return lanceItems.size() + 1;
-		return lanceItems.size() + 2;
+
+		return lanceItems.size() + OFFSET_2;
 	}
 
 	@Override
@@ -85,10 +88,10 @@ public class LancesBaseAdapter extends BaseAdapter {
         View vi_header = convertView;
         View vi_jogo = convertView;        
         
-        //vi 	= inflater.inflate(R.layout.lances_item, null);
+
         vi 	= inflater.inflate(R.layout.lances_item, null);
         vi_header = inflater.inflate(R.layout.jogos_header_item, null);
-        vi_jogo = inflater.inflate(R.layout.jogos_item, null); 
+        vi_jogo = inflater.inflate(R.layout.lances_header_item, null); 
 
         TextView l_sigla_host = (TextView)vi_jogo.findViewById(R.id.sigla_host);
         TextView l_placar_host = (TextView)vi_jogo.findViewById(R.id.placar_host); 
@@ -108,6 +111,13 @@ public class LancesBaseAdapter extends BaseAdapter {
         TextView text1 = (TextView)vi.findViewById(R.id.text1);
         TextView text2 = (TextView)vi.findViewById(R.id.text2);
         
+        TextView pic_text1 = (TextView)vi.findViewById(R.id.pic_text1);
+        TextView pic_text2 = (TextView)vi.findViewById(R.id.pic_text2);
+        NetworkImageView picurl1 = (NetworkImageView)vi.findViewById(R.id.picurl1);
+        NetworkImageView picurl2 = (NetworkImageView)vi.findViewById(R.id.picurl2);
+        
+        LinearLayout profilepic = (LinearLayout)vi.findViewById(R.id.profilepic); 
+        
 	    switch(viewType){
 	    
 
@@ -118,7 +128,7 @@ public class LancesBaseAdapter extends BaseAdapter {
 	    	   
 	       case 2:
 	    	   
-	    	   LanceItem jogo_item = lanceItems.get(position - 1);
+	    	   LanceItem jogo_item = lanceItems.get(position - OFFSET_1);
 	    	   
 	    	   
 
@@ -132,14 +142,15 @@ public class LancesBaseAdapter extends BaseAdapter {
 				l_estadio.setText(Html.fromHtml("<b>" + jogo_item.getDia() + "</b>" + 
 		        		" " + jogo_item.getEstadio() + " <b>" + jogo_item.getHora() + "</b>"));
 
-				l_status.setText("LANCE A LANCE");
+
+				l_status.setText(context.getResources().getString(R.string.lance));
 				
 		        return vi_jogo;
 		        
 	       case 3:  
 	    	    
 
-				LanceItem lance_item = lanceItems.get(position - 2);
+				LanceItem lance_item = lanceItems.get(position - OFFSET_2);
 				
 			    if (lance_item.getMinutes() != null && !lance_item.getMinutes().equals("")) {
 
@@ -160,10 +171,24 @@ public class LancesBaseAdapter extends BaseAdapter {
 	            } else {
 	            	text1.setVisibility(View.GONE);
 	            }	
-		        
-		        //text1.setText(lance_item.getText1());
+		        //---------
 		        text2.setText(lance_item.getText2());
-				
+		        //---------
+		        
+			    if (lance_item.getPicurl1() != null && !lance_item.getPicurl1().equals("")) {
+			    	//-----------
+			    	pic_text1.setText(lance_item.getPic_text1());
+			    	pic_text2.setText(lance_item.getPic_text2());
+			    				    	
+			    	picurl1.setImageUrl(lance_item.getPicurl1(), imageLoader);
+			    	picurl2.setImageUrl(lance_item.getPicurl2(), imageLoader);
+			    	//-----------
+			    	profilepic.setVisibility(View.VISIBLE);
+	            
+	            } else {
+	            	profilepic.setVisibility(View.GONE);
+	            }
+			
 				
 		        return vi;
 	        

@@ -1,19 +1,23 @@
 package com.brasileirao.android.listview;
 
 public class LanceItem {
-	private int id;
+	
 	private String sigla_host, picurl_host, placar_host, placar_guest,
 				picurl_guest, sigla_guest, estadio, status, dia, hora,
-				minutes, extra_info, text1, text2;
+				minutes, extra_info, text1, text2,picurl1, picurl2, pic_text1, pic_text2;
 
+	
+	
 	public LanceItem() {
 	}
 
-	public LanceItem(int id, String sigla_host, String picurl_host, String placar_host , String placar_guest, 
+	public LanceItem(String sigla_host, String picurl_host, String placar_host , String placar_guest, 
 			String picurl_guest, String sigla_guest, String estadio, String status, String dia, String hora,
-			String minutes,String extra_info,String text1, String text2) {
+			String minutes,String extra_info,String text1, String text2, String picurl1, String picurl2,
+			String pic_text1, String pic_text2) {
+		
 		super();
-		this.id = id;
+		
 		this.sigla_host = sigla_host;
 		this.picurl_host = picurl_host;
 		this.placar_host = placar_host;
@@ -28,6 +32,11 @@ public class LanceItem {
 		this.extra_info = extra_info; 
 		this.text1 = text1;  
 		this.text2 = text2;
+		
+		this.picurl1 = picurl1;
+		this.picurl2 = picurl2;
+		this.pic_text1 = pic_text1;
+		this.pic_text2 = pic_text2;
 		
 	}
 
@@ -144,5 +153,38 @@ public class LanceItem {
 		this.text2 = text2;
 	}		
 	
+	public String getPic_text2() {
+		return pic_text2;
+	}
+
+	public void setPic_text2(String pic_text2) {
+		this.pic_text2 = pic_text2;
+	}		
+	
+	public String getPic_text1() {
+		return pic_text1;
+	}
+
+	public void setPic_text1(String pic_text1) {
+		this.pic_text1 = pic_text1;
+	}		
+	
+	public String getPicurl1() {
+		return picurl1;
+	}
+
+	public void setPicurl1(String picurl1) {
+		this.picurl1 = picurl1;
+	}		
+	
+	public String getPicurl2() {
+		return picurl2;
+	}
+
+	public void setPicurl2(String picurl2) {
+		this.picurl2 = picurl2;
+	}		
+	
+
 	
 }

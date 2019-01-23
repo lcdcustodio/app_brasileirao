@@ -8,22 +8,12 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/feed_item_margin"
-        android:layout_marginRight="@dimen/feed_item_margin"
-        android:layout_marginTop="@dimen/feed_item_margin"
+        android:layout_marginLeft="@dimen/header_margin"
+        android:layout_marginRight="@dimen/header_margin"
+        android:layout_marginTop="@dimen/header_margin"
         android:orientation="vertical"        
         android:paddingTop="5dp" >
-		<!-- 
-		<TextView
-           android:id="@+id/rnk_header_item"
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"           
-           android:text="@string/jogos_header"
-           android:paddingBottom="4dp"
-           android:paddingTop="5dp"           
-           android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
-           android:textStyle="bold"
-           android:textSize="@dimen/feed_item_timestamp" />  -->
+
         
     </LinearLayout>
 

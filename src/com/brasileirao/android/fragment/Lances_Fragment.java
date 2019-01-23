@@ -36,9 +36,9 @@ public class Lances_Fragment extends Fragment {
 			Bundle savedInstanceState) {
 		
 		View rootView2 = inflater.inflate(R.layout.fgmt_background, container,false);
-		//View custom = inflater.inflate(R.layout.lances_item, null);
+
 		View custom2 = inflater.inflate(R.layout.lances_fgmt, null);
-		//*
+
 		list  = (ListView) custom2.findViewById(R.id.list);
 		
 		lanceItems = new ArrayList<LanceItem>();		
@@ -55,7 +55,7 @@ public class Lances_Fragment extends Fragment {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//*/
+
 		((ViewGroup) rootView2).addView(custom2);
 		
 		return rootView2;
@@ -104,9 +104,33 @@ public class Lances_Fragment extends Fragment {
 								.getString("text1");								
 						
 						item.setText1(text1);
-						//-------------						
-						//item.setText1(jogosObj.getString("text1"));
+						//-------------
 						item.setText2(jogosObj.getString("text2"));						
+						
+						//-------------	
+						String picurl1 = jogosObj.isNull("picurl1") ? null : jogosObj
+								.getString("picurl1");								
+						
+						item.setPicurl1(picurl1);
+						//-------------
+						//-------------	
+						String picurl2 = jogosObj.isNull("picurl2") ? null : jogosObj
+								.getString("picurl2");								
+						
+						item.setPicurl2(picurl2);
+						//-------------
+						//-------------	
+						String pic_text1 = jogosObj.isNull("pic_text1") ? null : jogosObj
+								.getString("pic_text1");								
+						
+						item.setPic_text1(pic_text1);
+						//-------------
+						//-------------	
+						String pic_text2 = jogosObj.isNull("pic_text2") ? null : jogosObj
+								.getString("pic_text2");								
+						
+						item.setPic_text2(pic_text2);
+						//-------------						
 						
 						lanceItems.add(item);
 						

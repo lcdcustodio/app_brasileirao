@@ -1873,18 +1873,6 @@ Toolbar Hive example
  Default text size for action bar title.
          */
         public static final int abc_text_size_title_material_toolbar=0x7f070024;
-        public static final int abs__action_bar_default_height=0x7f070047;
-        public static final int abs__action_bar_icon_vertical_padding=0x7f070048;
-        public static final int abs__action_bar_subtitle_bottom_margin=0x7f07004c;
-        public static final int abs__action_bar_subtitle_text_size=0x7f07004a;
-        public static final int abs__action_bar_subtitle_top_margin=0x7f07004b;
-        public static final int abs__action_bar_title_text_size=0x7f070049;
-        /**  Default screen margins, per the Android Design guidelines. 
-         */
-        public static final int activity_horizontal_margin=0x7f070045;
-        public static final int activity_vertical_margin=0x7f070046;
-        public static final int custom_tab_layout_height=0x7f07005b;
-        public static final int detail_backdrop_height=0x7f07005c;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -1919,20 +1907,20 @@ Toolbar Hive example
         public static final int dialog_fixed_width_minor=0x7f07000d;
         public static final int disabled_alpha_material_dark=0x7f070001;
         public static final int disabled_alpha_material_light=0x7f070000;
-        public static final int feed_item_border_width=0x7f070057;
-        public static final int feed_item_corner_radius=0x7f070056;
-        public static final int feed_item_margin=0x7f07004d;
-        public static final int feed_item_padding_left_right=0x7f07004f;
-        public static final int feed_item_padding_top_bottom=0x7f07004e;
-        public static final int feed_item_profile_info_padd=0x7f070051;
-        public static final int feed_item_profile_name=0x7f070052;
-        public static final int feed_item_profile_pic=0x7f070050;
-        public static final int feed_item_status_pad_left_right=0x7f070054;
-        public static final int feed_item_status_pad_top=0x7f070055;
-        public static final int feed_item_timestamp=0x7f070053;
-        public static final int lance_margin=0x7f070061;
-        public static final int lance_margin_2=0x7f070062;
-        public static final int minutes=0x7f07005e;
+        public static final int feed_item_border_width=0x7f07004e;
+        public static final int feed_item_corner_radius=0x7f07004d;
+        public static final int feed_item_padding_left_right=0x7f070046;
+        public static final int feed_item_padding_top_bottom=0x7f070045;
+        public static final int feed_item_profile_info_padd=0x7f070048;
+        public static final int feed_item_profile_name=0x7f070049;
+        public static final int feed_item_profile_pic=0x7f070047;
+        public static final int feed_item_status_pad_left_right=0x7f07004b;
+        public static final int feed_item_status_pad_top=0x7f07004c;
+        public static final int feed_item_timestamp=0x7f07004a;
+        public static final int header_margin=0x7f070057;
+        public static final int lance_margin=0x7f070055;
+        public static final int lance_margin_2=0x7f070056;
+        public static final int minutes=0x7f070050;
         /**  The width of the big icons in notifications. 
          */
         public static final int notification_large_icon_height=0x7f070022;
@@ -1943,17 +1931,14 @@ Toolbar Hive example
          Time) 
          */
         public static final int notification_subtext_size=0x7f070023;
-        public static final int servico=0x7f07005f;
-        public static final int servico_status_padding=0x7f070060;
-        public static final int sigla=0x7f07005d;
-        public static final int tab_label=0x7f07005a;
-        /** Toolbar Hive example 
- Default screen margins, per the Android Design guidelines.
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen> 
-         */
-        public static final int tab_max_width=0x7f070058;
-        public static final int tab_padding_bottom=0x7f070059;
+        public static final int padding_info=0x7f07005a;
+        public static final int padding_left_right=0x7f070059;
+        public static final int padding_top_bottom=0x7f070058;
+        public static final int player_name=0x7f070052;
+        public static final int player_pos=0x7f070053;
+        public static final int servico=0x7f070051;
+        public static final int servico_status_padding=0x7f070054;
+        public static final int sigla=0x7f07004f;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -2028,7 +2013,7 @@ Toolbar Hive example
     }
     public static final class id {
         public static final int View01=0x7f09005c;
-        public static final int action0=0x7f090066;
+        public static final int action0=0x7f090069;
         public static final int action_bar=0x7f090040;
         public static final int action_bar_activity_content=0x7f090003;
         public static final int action_bar_container=0x7f09003f;
@@ -2037,7 +2022,7 @@ Toolbar Hive example
         public static final int action_bar_subtitle=0x7f090024;
         public static final int action_bar_title=0x7f090023;
         public static final int action_context_bar=0x7f090041;
-        public static final int action_divider=0x7f09006a;
+        public static final int action_divider=0x7f09006d;
         public static final int action_menu_divider=0x7f090005;
         public static final int action_menu_presenter=0x7f090006;
         public static final int action_mode_bar=0x7f09003d;
@@ -2046,14 +2031,13 @@ Toolbar Hive example
         public static final int activity_chooser_view_content=0x7f090026;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090019;
-        public static final int app_name=0x7f090072;
+        public static final int app_name=0x7f090076;
         public static final int beginning=0x7f090020;
         public static final int buttonPanel=0x7f090036;
-        public static final int cancel_action=0x7f090067;
+        public static final int cancel_action=0x7f09006a;
         public static final int checkbox=0x7f090038;
-        public static final int chronometer=0x7f09006d;
+        public static final int chronometer=0x7f090070;
         public static final int collapseActionView=0x7f09001a;
-        public static final int connection_text=0x7f090065;
         public static final int contentPanel=0x7f090031;
         public static final int custom=0x7f090035;
         public static final int customPanel=0x7f090034;
@@ -2064,25 +2048,25 @@ Toolbar Hive example
         public static final int dropdown=0x7f09001f;
         public static final int edit_query=0x7f090042;
         public static final int end=0x7f090021;
-        public static final int end_padder=0x7f090071;
+        public static final int end_padder=0x7f090074;
         public static final int expand_activities_button=0x7f090027;
         public static final int expanded_menu=0x7f090037;
         public static final int extra_info=0x7f09005f;
         public static final int frame_container=0x7f09004f;
-        public static final int frame_logo=0x7f090064;
+        public static final int frame_logo=0x7f090075;
         public static final int home=0x7f090000;
         public static final int homeAsUp=0x7f09000e;
         public static final int icon=0x7f09002b;
         public static final int ifRoom=0x7f09001b;
         public static final int image=0x7f090028;
-        public static final int info=0x7f090070;
+        public static final int info=0x7f090073;
         public static final int item_line=0x7f090061;
-        public static final int line1=0x7f09006b;
-        public static final int line3=0x7f09006e;
+        public static final int line1=0x7f09006e;
+        public static final int line3=0x7f090071;
         public static final int list=0x7f090051;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f09002a;
-        public static final int media_actions=0x7f090069;
+        public static final int media_actions=0x7f09006c;
         public static final int middle=0x7f090022;
         public static final int minutes=0x7f09005e;
         public static final int multiply=0x7f090014;
@@ -2090,10 +2074,15 @@ Toolbar Hive example
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
         public static final int parentPanel=0x7f09002d;
+        public static final int pic_text1=0x7f090065;
+        public static final int pic_text2=0x7f090066;
+        public static final int picurl1=0x7f090063;
+        public static final int picurl2=0x7f090064;
         public static final int picurl_guest=0x7f090059;
         public static final int picurl_host=0x7f090054;
         public static final int placar_guest=0x7f090058;
         public static final int placar_host=0x7f090055;
+        public static final int profilepic=0x7f090062;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
         public static final int radio=0x7f09003a;
@@ -2122,15 +2111,15 @@ Toolbar Hive example
         public static final int src_in=0x7f090017;
         public static final int src_over=0x7f090018;
         public static final int status=0x7f09005b;
-        public static final int status_bar_latest_event_content=0x7f090068;
+        public static final int status_bar_latest_event_content=0x7f09006b;
         public static final int submit_area=0x7f09004b;
         public static final int swipeToRefresh=0x7f090050;
         public static final int tabMode=0x7f09000c;
-        public static final int text=0x7f09006f;
-        public static final int text1=0x7f090062;
-        public static final int text2=0x7f090063;
+        public static final int text=0x7f090072;
+        public static final int text1=0x7f090067;
+        public static final int text2=0x7f090068;
         public static final int textSpacerNoButtons=0x7f090033;
-        public static final int time=0x7f09006c;
+        public static final int time=0x7f09006f;
         public static final int timeline=0x7f090060;
         public static final int timestamp=0x7f09005d;
         public static final int title=0x7f09002c;
@@ -2211,23 +2200,21 @@ Toolbar Hive example
         public static final int jogos_header_item=0x7f03001c;
         public static final int jogos_item=0x7f03001d;
         public static final int lances_fgmt=0x7f03001e;
-        public static final int lances_item=0x7f03001f;
-        public static final int lances_item_bckup=0x7f030020;
-        public static final int no_internet_connection=0x7f030021;
-        public static final int notification_media_action=0x7f030022;
-        public static final int notification_media_cancel_action=0x7f030023;
-        public static final int notification_template_big_media=0x7f030024;
-        public static final int notification_template_big_media_narrow=0x7f030025;
-        public static final int notification_template_lines=0x7f030026;
-        public static final int notification_template_media=0x7f030027;
-        public static final int notification_template_part_chronometer=0x7f030028;
-        public static final int notification_template_part_time=0x7f030029;
-        public static final int select_dialog_item_material=0x7f03002a;
-        public static final int select_dialog_multichoice_material=0x7f03002b;
-        public static final int select_dialog_singlechoice_material=0x7f03002c;
-        public static final int splash_fragment=0x7f03002d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002e;
-        public static final int temp_bckup=0x7f03002f;
+        public static final int lances_header_item=0x7f03001f;
+        public static final int lances_item=0x7f030020;
+        public static final int notification_media_action=0x7f030021;
+        public static final int notification_media_cancel_action=0x7f030022;
+        public static final int notification_template_big_media=0x7f030023;
+        public static final int notification_template_big_media_narrow=0x7f030024;
+        public static final int notification_template_lines=0x7f030025;
+        public static final int notification_template_media=0x7f030026;
+        public static final int notification_template_part_chronometer=0x7f030027;
+        public static final int notification_template_part_time=0x7f030028;
+        public static final int select_dialog_item_material=0x7f030029;
+        public static final int select_dialog_multichoice_material=0x7f03002a;
+        public static final int select_dialog_singlechoice_material=0x7f03002b;
+        public static final int splash_fragment=0x7f03002c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002d;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -2292,6 +2279,7 @@ Toolbar Hive example
         public static final int app_name=0x7f0a0012;
         public static final int internet_connection=0x7f0a0013;
         public static final int jogos_header=0x7f0a0014;
+        public static final int lance=0x7f0a0016;
         /**  Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated. May need to be localized

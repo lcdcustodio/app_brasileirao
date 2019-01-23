@@ -30,7 +30,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-			android:background="@drawable/bg_state_pressed"                
+                
             
             android:paddingLeft="@dimen/padding_left_right"
             android:paddingRight="@dimen/padding_left_right" >

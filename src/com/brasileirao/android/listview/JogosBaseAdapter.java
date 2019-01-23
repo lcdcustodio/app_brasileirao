@@ -30,6 +30,9 @@ public class JogosBaseAdapter extends BaseAdapter {
 	private static final Integer TYPE1   = 1;
 	private static final Integer TYPE2   = 2;
 	
+	private static final Integer OFFSET_1  = 1;
+
+
 	
 	
 	public JogosBaseAdapter(Context context, List<JogoItem> jogoItems){
@@ -42,7 +45,7 @@ public class JogosBaseAdapter extends BaseAdapter {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return jogoItems.size() + 1;
+		return jogoItems.size() + OFFSET_1;
 	}
 
 	@Override
@@ -105,7 +108,7 @@ public class JogosBaseAdapter extends BaseAdapter {
 
 	       case 2:        
 
-				JogoItem jogo_item = jogoItems.get(position - 1);
+				JogoItem jogo_item = jogoItems.get(position - OFFSET_1);
 		        
 
 				placar_host.setText(jogo_item.getPlacar_host());
@@ -114,7 +117,7 @@ public class JogosBaseAdapter extends BaseAdapter {
 		        sigla_guest.setText(jogo_item.getSigla_guest());		        
 		        pic_host.setImageUrl(jogo_item.getPicurl_host(), imageLoader);
 		        pic_guest.setImageUrl(jogo_item.getPicurl_guest(), imageLoader);		        
-		        //estadio.setText(jogo_item.getEstadio());
+
 		        estadio.setText(Html.fromHtml("<b>" + jogo_item.getDia() + "</b>" + 
 		        		" " + jogo_item.getEstadio() + " <b>" + jogo_item.getHora() + "</b>"));
 		        status.setText(jogo_item.getStatus());
