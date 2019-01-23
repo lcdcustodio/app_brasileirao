@@ -54,3 +54,5 @@ A aplicação foi desenvolvida para o Android. Foram criadas 02 Telas seguindo as 
 * Utilizaria Android Studio ao invés do Eclipse para desenvolver o projeto. Utilizei Eclipse, pois não sou administrador da minha estação de trabalho e o Android Studio não é um software homologado pela minha empresa. Com mais tempo teria providenciado outro notebook para utilizar o Android Studio. 
 
 * Implementaria uma rotina para avisar o usuário a respeito da falta de conectividade de rede. Na versão atual esse mecanismo não foi previsto. Logo, a experiência de uso do app nessa condições (falta de internet) será prejudicada.
+
+* Implementaria Notificação via Push no app para alertar de gols, destaques, etc.
